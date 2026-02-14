@@ -3,7 +3,7 @@ import logo from "../assets/QUTTADEV 22.png";
 import { useState } from "react";
 
 function Hero() {
-const [isOpen, setIsOpen] = useState(false);
+const [setIsOpen] = useState(false);
 
   const handleScroll = (id) => {
     const section = document.getElementById(id);
