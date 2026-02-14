@@ -6,7 +6,7 @@ function SobreNosotros() {
       <div className="container">
         <h2>Sobre Nosotros</h2>
         <p>
-          Somos una empresa especializada en desarrollo web moderno,
+          Somos un equipo especializado en desarrollo web moderno,
           ayudamos a negocios a crecer en el mundo digital con soluciones
           rápidas, seguras y profesionales.
         </p>
