@@ -1,4 +1,4 @@
-import "./Servicios.css";
+import "./servicios.css";
 
 function Servicios() {
     return (
