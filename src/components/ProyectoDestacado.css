@@ -1,0 +1,94 @@
+.proyecto {
+  min-height: 100vh;
+  padding: 100px clamp(20px, 5vw, 60px);
+  background-color: #000000;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proyecto-content {
+  max-width: 1000px;
+  width: 100%;
+  text-align: left;
+}
+
+.proyecto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.proyecto h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #00c9ff;
+}
+
+.proyecto p {
+  color: #ccc;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.btn-proyecto {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #00c9ff, #b81fff);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.btn-proyecto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 201, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+
+  .proyecto {
+    padding: 80px 30px;
+  }
+
+  .proyecto h2 {
+    font-size: 2.2rem;
+  }
+
+  .proyecto h3 {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .proyecto {
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .proyecto-content {
+    text-align: center;
+  }
+
+  .proyecto h2 {
+    font-size: 1.9rem;
+  }
+
+  .proyecto h3 {
+    font-size: 1.3rem;
+  }
+
+  .proyecto p {
+    font-size: 0.95rem;
+  }
+
+  .btn-proyecto {
+    width: 100%;
+    max-width: 300px;
+  }
+
+}
+
