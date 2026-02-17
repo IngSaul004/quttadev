@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./whatsappContacto.css";
+import "./WhatsappContacto.css";
 
 const WhatsappContacto = () => {
   const [visible, setVisible] = useState(false);
