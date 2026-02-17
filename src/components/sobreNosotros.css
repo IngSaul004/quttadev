@@ -1,23 +1,55 @@
 .sobre {
+    position: relative;
     min-height: 100vh;
-    padding: 100px clamp(20px, 5vw, 60px);
+    padding: 120px clamp(20px, 5vw, 80px);
     background-color: black;
     color: white;
     text-align: center;
+    overflow: hidden;
+}
+
+/* Glow de fondo sutil */
+.sobre::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(184, 31, 255, 0.08), transparent 60%);
+    z-index: 0;
 }
 
 .sobre h2 {
-    font-size: 2.5rem;
-    margin-bottom: 60px;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Línea decorativa debajo del título */
+.sobre h2::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 15px auto 0 auto;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #00c9ff, #b81fff);
 }
 
 .sobre p {
-    max-width: 800px;
-    margin: 0 auto 60px auto;
-    color: #ccc;
-    font-size: 1.1rem;
+    max-width: 750px;
+    margin: 30px auto 70px auto;
+    color: #bbb;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
 }
 
+/* CONTENEDOR */
 .valores {
     display: flex;
     justify-content: center;
@@ -25,68 +57,76 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
+/* CARDS */
 .valores div {
     background-color: #111;
-    border-radius: 15px;
-    padding: 30px;
-    width: 300px;
-    transition: transform 0.3s;
+    border-radius: 18px;
+    padding: 35px;
+    width: 320px;
+    transition: all 0.35s ease;
     border: 1px solid #1f1f1f;
+    backdrop-filter: blur(10px);
+}
+
+/* Efecto hover más premium */
+.valores div:hover {
+    transform: translateY(-12px);
+    border: 1px solid transparent;
+    background:
+        linear-gradient(#111, #111) padding-box,
+        linear-gradient(90deg, #00c9ff, #b81fff) border-box;
+    box-shadow: 
+        0 15px 40px rgba(0, 201, 255, 0.15),
+        0 0 25px rgba(184, 31, 255, 0.15);
 }
 
 .valores h3 {
     margin-bottom: 20px;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    background: linear-gradient(90deg, #00c9ff, #b81fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .valores p {
     font-size: 1rem;
     color: #ccc;
+    line-height: 1.6;
 }
 
-.valores div:hover {
-    transform: translateY(-10px);
-    border: 1px solid transparent;
-    background: 
-        linear-gradient(#111, #111) padding-box,
-        linear-gradient(90deg, #00c9ff, #b81fff) border-box;
-    box-shadow: 0 10px 30px rgba(0, 201, 255, 0.15);
-}
-
-/* Responsive */
+/* RESPONSIVE */
 
 @media (max-width: 1024px) {
 
     .sobre {
-        padding: 80px 30px;
+        padding: 100px 40px;
     }
 
     .valores div {
         width: 45%;
     }
-
 }
 
 @media (max-width: 768px) {
 
     .sobre {
-        padding: 70px 20px;
+        padding: 80px 20px;
     }
 
     .sobre h2 {
-        font-size: 2rem;
-        margin-bottom: 40px;
+        font-size: 2.2rem;
     }
 
     .valores div {
         width: 100%;
-        max-width: 350px;
+        max-width: 360px;
         margin: 0 auto;
-        padding: 25px;
+        padding: 30px;
     }
-
 }
 
 @media (hover: none) {

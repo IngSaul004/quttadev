@@ -1,71 +1,113 @@
 .proyecto {
+  position: relative;
   min-height: 100vh;
-  padding: 100px clamp(20px, 5vw, 60px);
+  padding: 120px clamp(20px, 5vw, 80px);
   background-color: #000000;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+
+/* Glow de fondo elegante */
+.proyecto::before {
+  content: "";
+  position: absolute;
+  right: -200px;
+  top: -200px;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(0, 201, 255, 0.08), transparent 65%);
+  z-index: 0;
 }
 
 .proyecto-content {
   max-width: 1000px;
   width: 100%;
   text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
+/* Título principal */
 .proyecto h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
+/* Línea decorativa */
+.proyecto h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 3px;
+  margin-top: 15px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00c9ff, #b81fff);
+}
+
+/* Subtítulo */
 .proyecto h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-  color: #00c9ff;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  background: linear-gradient(90deg, #00c9ff, #b81fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* Texto */
 .proyecto p {
-  color: #ccc;
-  margin-bottom: 30px;
-  line-height: 1.6;
+  color: #bdbdbd;
+  margin-bottom: 35px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  max-width: 750px;
 }
 
+/* Botón */
 .btn-proyecto {
   display: inline-block;
-  padding: 12px 28px;
-  border-radius: 8px;
+  padding: 14px 32px;
+  border-radius: 10px;
   text-decoration: none;
   background: linear-gradient(90deg, #00c9ff, #b81fff);
   color: white;
-  transition: 0.3s ease;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
 }
 
+/* Hover botón premium */
 .btn-proyecto:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 25px rgba(0, 201, 255, 0.3);
+  transform: scale(1.07);
+  box-shadow:
+    0 15px 35px rgba(0, 201, 255, 0.25),
+    0 0 25px rgba(184, 31, 255, 0.25);
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 1024px) {
 
   .proyecto {
-    padding: 80px 30px;
+    padding: 100px 40px;
   }
 
   .proyecto h2 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
 
   .proyecto h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
-
 }
 
 @media (max-width: 768px) {
 
   .proyecto {
-    padding: 70px 20px;
+    padding: 80px 20px;
     text-align: center;
   }
 
@@ -74,21 +116,21 @@
   }
 
   .proyecto h2 {
-    font-size: 1.9rem;
+    font-size: 2rem;
   }
 
   .proyecto h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .proyecto p {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .btn-proyecto {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
   }
-
 }
-
